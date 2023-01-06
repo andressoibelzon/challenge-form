@@ -7,7 +7,6 @@ const Header = () => {
                 <div class="container-fluid ">
                     <a class="navbar-brand">Libreria Acuarella</a>
                     <div id='dots'>⚪</div>
-                    <div>example</div>
                 </div>
             </div>
         </>

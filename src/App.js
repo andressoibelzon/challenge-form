@@ -1,12 +1,26 @@
-import Header from "./components/Header";
+import formJSON from './components/data/db.json';
+import { useState, useEffect } from 'react';
+import Element from './components/Element';
 
 
 function App() {
+  const [elements, setElements] = useState(null);
+  useEffect(() => {
+    setElements(formJSON[0])
+  }, [])
+  const { items } = elements ?? {}
   return (
     <>
-    <Header/>
-    <div>Hello World</div>
-    <button type="button" class="btn btn-primary">Primary</button>
+    <form>
+      { formJSON.items? formJSON.items.map((field, i) => 
+      <Element key={i} field={field} />)
+      : null }
+
+
+
+</form>
+
+
 
     </>
   );
