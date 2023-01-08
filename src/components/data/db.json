@@ -5,6 +5,7 @@
 			"label": "Nombre completo",
 			"name": "full_name",
 			"required": true
+			
 		},
 		{
 			"type": "email",

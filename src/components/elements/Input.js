@@ -3,11 +3,10 @@ import React from 'react'
 const Input = ({type, label, name, required}) => {
     return (
         <div className='mb-3'>
-            <label for="exampleInputEmail1" className='form-label'>{label}</label>
-            <input type="text" className="form-control" id="exampleInputEmail1" 
+            <label for={name} className='form-label'>{label}</label>
+            <input type={type} className="form-control" id={name}
             placeholder={name ? name : ""} 
-            // value
-            required>
+            required={required}>
             </input>
         </div>
     )

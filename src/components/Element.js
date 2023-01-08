@@ -10,11 +10,6 @@ const Element = ({ field: { type, label, name, options, required } }) => {
 
     switch (type) {
         case "text":
-            return (<Input
-                label={label}
-                name={name}
-                required={required}
-                />)
         case "email":
             return (<Input
                 label={label}
