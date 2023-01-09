@@ -4,12 +4,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap
 import './styles/styles.scss'; //scss
-import { getFirestore } from "firebase/firestore";
-import { getApp, initializeApp} from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { initializeApp} from "firebase/app";
 
-console.log(process.env.REACT_APP_API_KEY);
-console.log(process.env.REACT_APP_AUTHDOMAIN);
+
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTHDOMAIN,

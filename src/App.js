@@ -4,7 +4,7 @@ import Element from './components/Element';
 import { FormContext } from './components/elements/FormContext';
 import { getFirestore } from "firebase/firestore";
 import { collection, addDoc, getDocs, Doc, deleteDoc, getDoc, setDoc } from 'firebase/firestore';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link, Switch} from "react-router-dom";
 import Users from './components/elements/Users';
 
 
@@ -43,19 +43,22 @@ function App() {
 
 
   return (
+      <div className="App">
     <FormContext.Provider>
-      {/* <BrowserRouter> */}
-        {/*<Routes>
-        <Route path='/'> */}
-        <form className="container-fluid col-xxl-8 px-4 my-5 border rounded shadow-sm" onSubmit={handleSubmit}>
-          {elements ? elements.map((field, i) =>
-            <Element key={i} field={field} />)
-            : null}
-        </form>
-        {/* </Route>
-      </Routes> */}
-      {/* </BrowserRouter> */}
+
+
+
+
+        {/* <Link to='/'> */}
+          <form className="container-fluid col-xxl-8 px-4 my-5 border rounded shadow-sm" onSubmit={handleSubmit}>
+            {elements ? elements.map((field, i) =>
+
+              <Element key={i} field={field} />)
+              : null}
+          </form>
     </FormContext.Provider>
+        </div>
+    
   );
 }
 
