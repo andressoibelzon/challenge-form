@@ -2,7 +2,7 @@ import React from 'react'
 
 const Select = ({ type, label, name, required, options }) => {
     return (
-        <div className='mb-3'>
+        <div className='container mb-3'>
             <label for={name}>{label}</label>
             <select className="form-select" required={required} id={name}>
                 <option>{name}</option>

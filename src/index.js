@@ -3,7 +3,27 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap
-import './styles/styles.scss' //scss
+import './styles/styles.scss'; //scss
+import { getFirestore } from "firebase/firestore";
+import { getApp, initializeApp} from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+console.log(process.env.REACT_APP_API_KEY);
+console.log(process.env.REACT_APP_AUTHDOMAIN);
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSGINGSENDERID,
+  appId: process.env.REACT_APP_APPID
+}
+
+
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
