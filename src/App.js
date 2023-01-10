@@ -18,6 +18,7 @@ function App() {
 
     const form = event.currentTarget
     const formElements = form.elements
+    console.log(formElements["full_name"].value)
 
     let toFirebase = {};
 
@@ -28,25 +29,30 @@ function App() {
         toFirebase[nameKey] = formElements[key].value;
       }
     }
-    console.log(toFirebase);
+    // console.log(toFirebase);
 
 
     try {
       const db = getFirestore();
       const addUser = collection(db, "users");
       const response = await addDoc(addUser, toFirebase);
-      console.log("a firebase");
+      alert("Log in correct");
+      formElements["full_name"].value = ""
+      formElements["birth_date"].value = ""
+      formElements["email"].value = ""
+      formElements["country_of_origin"].value = ""
+      formElements["terms_and_conditions"].checked = false; 
+
+      
     } catch (error) {
       console.log(error)
     }
   }
-
+ console.log(elements)
 
   return (
       <div className="App">
     <FormContext.Provider>
-
-
 
 
         {/* <Link to='/'> */}
