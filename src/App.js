@@ -43,10 +43,11 @@ function App() {
       formElements["country_of_origin"].value = ""
       formElements["terms_and_conditions"].checked = false; 
       console.log("to firebase");
+      console.log(response);
       
 
-    } catch (response) {
-      console.log(response)
+    } catch (error) {
+      console.log(error)
     }
   }
  console.log(elements)
