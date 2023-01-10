@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 
 const Users = ({Provider}) => {
@@ -21,7 +21,6 @@ const Users = ({Provider}) => {
             console.log(usersList)
 
             setUsers(usersList); // guardamos los products
-            
         })
     }
 
