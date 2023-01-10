@@ -42,6 +42,7 @@ function App() {
       formElements["email"].value = ""
       formElements["country_of_origin"].value = ""
       formElements["terms_and_conditions"].checked = false; 
+      
 
       
     } catch (error) {
