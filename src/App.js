@@ -45,9 +45,8 @@ function App() {
       console.log("to firebase");
       
 
-      
-    } catch (error) {
-      console.log(error)
+    } catch (response) {
+      console.log(response)
     }
   }
  console.log(elements)
